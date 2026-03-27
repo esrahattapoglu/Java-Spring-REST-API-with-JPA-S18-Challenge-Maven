@@ -7,14 +7,12 @@ import com.workintech.fswebs18challengemaven.entity.Color;
 import com.workintech.fswebs18challengemaven.entity.Type;
 import com.workintech.fswebs18challengemaven.exceptions.CardException;
 import com.workintech.fswebs18challengemaven.exceptions.GlobalExceptionHandler;
-import com.workintech.fswebs18challengemaven.repository.CardRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
@@ -33,6 +31,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import com.workintech.fswebs18challengemaven.repository.CardRepository;
 
 @WebMvcTest(controllers = {CardController.class, GlobalExceptionHandler.class,FswebS18ChallengeMavenApplicationTests.class})
 @ExtendWith(ResultAnalyzer.class)
